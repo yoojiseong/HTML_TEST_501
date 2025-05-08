@@ -1,0 +1,58 @@
+#grid {
+    display: grid;
+    grid-template-columns: 150px 1fr;
+}
+
+body {
+    margin: 0;
+}
+
+h1 {
+    font-size: 45px;
+    text-align: center;
+    border-bottom: 1px solid gray;
+    margin: 0;
+}
+
+#grid>ol {
+    /* ol -> 모든 ol 요소 의미
+#grid ol -> 아이디 grid인 요소 하위에 있는 모든 ol만 가리킴 
+#grid>of -> 아이디 grid인 요소 하위에 있는 ol을 가리킴*/
+    border-right: 1px solid gray;
+    width: 100px;
+    margin-left: 20px;
+    margin-top: 0;
+    padding: 20px;
+
+}
+
+#article {
+    padding-left: 25px;
+}
+/* 
+h2 {
+    border: 5px rgb(35, 235, 9) solid;
+    padding: 10px;
+    display: inline-block;
+}
+
+.box {
+    border: 5px rgb(238, 5, 188) dotted;
+    margin: 5px;
+    font-size: 20px;
+    display: inline-block;
+}
+
+/* body {
+    text-align: center;
+} */
+
+#CH_color {
+    border: 5px aquamarine solid;
+    display: inline-block;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    
+}

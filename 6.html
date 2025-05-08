@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css" />
+</head>
+
+<body>
+    <style>
+
+
+    .gallery{
+            display: grid;
+          
+            grid-template-columns: repeat(auto-fit, minmax(200px,1fr)) ; 
+
+            gap: 10px;
+        }
+        .gallery img{ 
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            transition: all 0.2s linear;
+
+        }
+        .gallery img:hover{
+            transform: scale(1.1);
+            position: relative;
+            z-index: 1;
+        }
+        .text {
+            font-size: 25px;
+            text-align: center;
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        .underbox{
+            border-bottom: 2px solid black;
+        }
+        .item{
+            text-align: center;
+        }
+        p{
+            margin: 0;
+        }
+    </style>
+    <h1 class="text underbox"><a href="index.html">WEB</a></h1>
+    <div id="grid">
+        <ol>
+            <li><a href="1.html">HTML</a></li>
+            <li><a href="2.html">CSS</a></li>
+            <li><a href="3.html">JavaScript</a></li>
+            <li><a href="4.html">Profile</a></li>
+            <li><a href="5.html">Introduce Myself</a></li>
+            <li><a href="6.html">Gallery</a></li>
+        </ol>
+
+        
+        <div id="article">
+            <h1 class="text">사진첩</h1>
+            <div class="gallery">
+                <img src="img/1.picture.jpg" alt="샘플사진1">
+                <img src="img/2.picture.jpg" alt="샘플사진2">
+                <img src="img/3.picture.jpg" alt="샘플사진3">
+                <img src="img/4.picture.jpg" alt="샘플사진4">
+            </div>
+            <h1 class="text"> 여행 상품</h1>
+            <!-- <div class="gallery">
+                <p class="text">가부키초<img src="250508/css/img/gabukicho.avif" alt="샘플사진5"></p>
+                <p class="text">아키하바라<img src="250508/css/img/sakura.avif" alt="샘플사진6"></p>
+                <p class="text">시부야<img src="250508/css/img/sibuya.avif" alt="샘플사진7"></p>
+                <p class="text">신사<img src="250508/css/img/sinsa.avif" alt="샘플사진8"></p>
+            </div> -->
+            <div class="gallery">
+                <div class="item">
+                    <p class="text">가부키초</p>
+                    <img src="250508/css/img/gabukicho.avif" alt="샘플사진5">
+                </div>
+                <div class="item">
+                    <p class="text">아키하바라</p>
+                    <img src="250508/css/img/sakura.avif" alt="샘플사진6">
+                </div>
+                <div class="item">
+                    <p class="text">시부야</p>
+                    <img src="250508/css/img/sibuya.avif" alt="샘플사진7">
+                </div>
+                <div class="item">
+                    <p class="text">신사</p>
+                    <img src="250508/css/img/sinsa.avif" alt="샘플사진8">
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
