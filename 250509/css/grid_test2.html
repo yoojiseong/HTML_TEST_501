@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        .container{
+            border: 5px solid pink;
+            display: grid;
+            /* grid-template-columns: 150px 1fr 1fr; */
+            /* grid-template-columns: repeat(3,1fr); */
+            /* 3은 갯수 지정 1fr은 크기 지정 */
+            grid-template-columns: repeat(auto-fit,minmax(200px,1fr));
+            /* auto-fit : 요소 갯수 자동 지정, minmax(최소,최대) */
+        }
+        .box{
+            border: 1px solid red;
+            /* width: 200px; */
+        }
+        .container img{
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            /*transition: transform 0.2s; /*이미지를 0.2초 애니메이션 효과임*/
+            border-radius: 8px; /*이미지 모서리를 둥글게 처리하는 효과*/
+  
+        }
+        .container img:hover { /*hover 마우스의 동작 함수 */
+            /*transform: scale(1.03); /*마우스 커서를 이미지 위에 올릴 경우 확대를 한다*/
+            /* transform: translate(100px,100px); */
+            /* transform: rotate(45deg); */
+            /* transform: skew(45deg,78deg); */
+            background-color: aqua;
+            transition-duration: 0.5s;
+            transition-timing-function: ease-in-out;
+            transition-delay: 0s;
+        }
+        .container .test1{
+            border: 2px solid blue;
+            width: 300px;
+        }
+    </style>
+    <h2>나의 사진첩</h2>
+    <div class="container">
+        <div class="test1"><img src="img/1.picture.jpg" alt="샘플사진1"></div>
+        <img src="img/2.picture.jpg" alt="샘플사진2">
+        <img src="img/3.picture.jpg" alt="샘플사진3">
+        <img src="img/4.picture.jpg" alt="샘플사진4">
+        <img src="img/tokyotower.avif" alt="샘플사진5">
+        <img src="img/yourname.avif" alt="샘플사진6">
+    </div>
+</body>
+</html>
