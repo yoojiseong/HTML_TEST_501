@@ -1,0 +1,191 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    /* 박스 영역이 테두리를 포함 */
+    box-sizing: border-box;
+    font-family: "Jua";
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+#container {
+    margin: 0 auto;
+    width: 1300px;
+    background-color: white;
+}
+
+header {
+    display: grid;
+    grid-template-rows: 60px 40px;
+    width: 100%;
+    height: 140px;
+    background-color: rgb(104, 198, 235);
+}
+
+#logo {
+    float: center;
+    width: 250px;
+    height: 100px;
+    line-height: 100px;
+    padding-left: 20px;
+}
+
+#logo h1 {
+    width: 1300px;
+    height: 60px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 30px;
+    color: white;
+    text-shadow: 10px -10px 10px #222;
+}
+
+nav {
+    float: right;
+    width: 100%;
+    height: 100px;
+}
+
+#topMeunu {
+    height: 40px;
+}
+
+#topMenu>li {
+    float: left;
+    position: relative;
+}
+
+#topMenu>li>a {
+    display: block;
+    font-size: 2em;
+    color: #fff;
+    font-weight: 600;
+    padding: 20px;
+    padding-left: 70px;
+    padding-right: 140px;
+}
+
+#topMenu>li>a:hover {
+    color: #9a08dd;
+    text-shadow: 0px -4px 0px #222;
+}
+
+.contents {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    width: 1300px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+main>section {
+    margin-top: 60px;
+}
+
+main h2 {
+    padding-left: 120px;
+    font-size: 1.5em;
+    line-height: 2.5;
+    text-align: left;
+}
+
+main h3 {
+    font-size: 1.2em;
+    line-height: 2.2;
+}
+
+main div {
+    margin-top: 20px;
+}
+
+.Maincontent p {
+    line-height: 2.0;
+    color: #222;
+}
+
+.Maincontent>img {
+    width: 25%;
+    float: left;
+    margin-right: 50px;
+    border-radius: 20px;
+}
+
+.Subcontent ul {
+    list-style: none;
+}
+
+.Subcontent ul list {
+    line-height: 2;
+}
+
+footer {
+    background-color: rgb(112, 150, 165);
+    width: 1300px;
+    height: 100px;
+    border-top: 3px solid black;
+}
+
+
+#footerMenu {
+    width: 100%;
+    height: 20px;
+    margin-left: 60px;
+}
+
+#footerMenu ul {
+    margin-top: 15px;
+}
+
+
+#footerMenu ul li {
+    float: left;
+    padding: 5px 40px;
+    border-right: 1px solid #ddd;
+}
+
+#footerMenu ul li:last-child {
+    border: none;
+}
+
+#footerMenu ul li a,
+#footerMenu ul li a:visited {
+    font-size: 15px;
+    color: #666;
+}
+
+#sideBar {
+    width: 200px;
+    float: left;
+    padding: 20px;
+    margin-left: 0;
+    background-color: rgb(168, 201, 214);
+    border: 1px solid rgb(168, 201, 214);
+    border-radius: 10px;
+}
+
+#sideBar ul li {
+    margin-bottom: 50px;
+}
+
+/* #sideBar  img{
+    width: 80px;
+    float: left;
+    border-radius: 25px;
+} */
+.tooltip-wrapper {
+    position: relative;
+}
+
+.tooltip {
+    position: sticky;
+    top: 0;
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        #box{
+            width:200px;
+            height: 100px;
+            background: red;
+        }
+    </style>
+    <div id="box">
+
+    </div>
+    <script>
+        //요소를 선택하는 작업 , 특정 상수에 담았다.
+        const box = document.getElementById('box')
+        //기능 분리
+        const alertSample = () => alert("alert 테스트 함수입니다.")
+        //기능2, 배경색을 변경하는 기능
+        const backgroundChange = () => box.style.background = 'blue';
+        //기능3, 배경색을 원래대로 발간색으로 변경하느 ㄴ기능 추가 후 이벤트 설장
+        const backreturn = () => box.style.background = 'red';
+        box.addEventListener("dblclick",alertSample)
+        box.addEventListener("mouseenter",backgroundChange)
+        box.addEventListener("mouseleave",backreturn)
+    </script>
+</body>
+</html>
