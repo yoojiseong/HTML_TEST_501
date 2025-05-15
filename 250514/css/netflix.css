@@ -1,0 +1,474 @@
+/* 전체적인 태그에 초기화 설정 */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 전체 body 하위의 모든 태그에 적용 */
+body{
+   background-color: #111;
+   color: #fff;
+}
+
+
+section{
+    padding: 40px 10%;
+}
+
+section h2{
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+section h3{
+    font-size: 36px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+/* 헤더 부분 작업 */
+header{
+    width: 100%;
+    height: 100vh;
+    /* 1) 배경 이미지 
+    ../ : 현재 css 파일에서(netflix.css파일에서), 하나 폴더 위로 이동
+    2) 그라데이션 효과  rgba (a)-투명도*/
+    /* background:linear-gradient([방향], 색상1, 색상2, 색상3...);
+    [방향] 옵션 : top, bottom , left, right, 각도 to right, 45deg
+    색상: 시작 색상, 끝 색상, 중간 색상등 여러 개 지정 가능
+    rgba(r,g,b,a):빨,초,파+투명도(0~1)
+    현재 상태는 방향이 없어서, 위/아래 모두 같은 색이고,
+    반투명 검정색을 만드는 목적 */
+    background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),url(/img/test3.jpg) ;
+    background-size: cover;
+    padding: 10px 8%;
+    /* 기준위치를 정함 */
+    position: relative;
+}
+nav{
+    display: flex;
+    /* 주축 방향의 가로 정렬 */
+    justify-content: space-between;
+    /* 교차 축 방향의 세로 정렬 */
+    align-items: center;
+    padding: 10px 0;
+}
+nav .logo{
+    font-size: 42px;
+    color: #dd0001;
+    cursor: pointer;
+}
+nav button{
+    border: 0;  
+    outline: 0;
+    border-radius: 5px;
+    background-color: #dd0001;
+    color: #fff;
+    font-size: 16px;
+    padding: 7px 24px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+.lang{
+    /* inline-flex : css Flexbox 레이아웃을 적용하면서 
+    요소 자체는 인라인 요소 처럼 취급.
+    flex : 블록 요소 + css Flexbox 레이아웃을 적용 */
+    display: inline-flex;
+    padding: 7px 30px;
+    align-items: center;
+    border: 1px solid #fff;
+    background-color: transparent;
+}
+
+.header-content{
+    /* 절대위치 , header를 기준으로 배치 */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    /* 수직, 수평 가운데 정렬할 때 자주 쓰는 방식
+    원리 : 자기 너비의 50%만큼 왼쪽으로 이동
+    자기 높이의 50%만큼 위로 이도 */
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.header-content h2{
+    font-size: 60px;
+    line-height: 1.4;
+    font-weight: 600;
+    max-width: 650px;
+    margin-bottom: 20px;
+
+}
+.header-content h3{
+    font-weight: 400;
+    margin-bottom: 40px;
+    
+}
+
+.add-email{
+    background-color: #fff;
+    border-radius: 4px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    /* 요소 내부의 콘텐츠가 요소의 크기를 초과할 경우 초과된 부분을 화면에 보이지 않게 설정 */
+    overflow: hidden;
+}
+
+.add-email input{
+    border: 0;
+    outline: 0;
+    /* flex에서 레이아웃에서 유연하게 공간 분배를 지정함 
+    flex: 1; -> flex의 공간 전부를 차지함*/
+    flex: 1;
+    margin-left: 20px;
+    
+
+}
+
+.add-email button{
+    border: 0;
+    background-color: #db0001;
+    color: #fff;
+    font-size: 16px;
+    padding: 15px 30px;
+    cursor: pointer;
+}
+/* 반응형 헤더 부분 작업 
+가로 크기가 768px 이하 일 떄 css
+only screen : 오직 화면만 처리함*/
+@media only screen and (max-width: 768px){
+    .logo{
+        font-size: 20px;
+    }
+    nav button{
+        padding: 5px 10px;
+    }
+    .lang{
+        padding: 4px 8px;
+    }
+    .header-content{
+        /* 초기값 또는 상속값으로 되돌리는 옵션,
+        부모로부터 상속이 가능하면 상속을 받고,
+        상속이 불가하면, 초기값으로 리셋 */
+        position: unset;
+        transform: none;
+        padding-top: 150px;
+    }
+    .header-content h2{
+        font-size: 48px;
+        line-height: 50px;
+    } 
+    .header-content h3{
+        font-size: 20px;
+    } 
+    .add-email button{
+        font-size: 12px;
+        padding: 10px 15px;
+    }
+}
+
+/* 배너 부분 작업 */
+
+.banner-content{
+    border-radius: 10px;
+    /* 그라데이션 작업 */
+    background: linear-gradient(to right, #651c3d 0%, #000000 60%);
+    padding: 15px;
+    margin-bottom: 40px;
+}
+.banner-content:hover{
+    transform: scale(1.03);
+    transition: 0.8s;
+}
+
+#banner p{
+    font-size: 20px;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 30px;
+}
+#banner button,
+ .membership-content button {
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    background: rgba(128,128,128,0.4);
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.select-menu{
+    border: 1px solid #fff;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 24px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+.select-menu option{
+    background-color: #2b2b2b;
+    color: #fff;
+}
+
+
+/* 맴버쉽 부분 작업 */
+.membership-content{
+    border-radius: 6px;
+    padding: 20px 10px;
+    margin-bottom: 40px;
+    /* to right : 진행방향, 왼쪽 -> 오른쪾
+    rgba(,,,) : 시작 색깔 , 투명도 까지 표현
+    0% : 그라디언트의 위치 지정
+    no-repeat : 이미지 반복하지 않음
+    right center : 이미지 위치를 오른쪽 중앙에 정렬 */
+    background: linear-gradient(to right, rgba(101,28,61,0.9) 0%, 
+    rgba(40,10,43,0.5) 60%), url(/img/gabukicho.avif) no-repeat right center;
+    /* 만약 배경이미지를 가로, 세로 비율 유지해서, 표현하고 싶을 경우 */
+    background-size: cover;
+}
+.membership-content p{
+    font-size: 20px;
+    color: rgba(255,255,255,0,7);
+    margin-bottom: 30px;
+}
+
+/* 선택 가이드 부분 작업 */
+#choice p{
+    font-size: 22px;
+    /* 투명도 0~1 , 0.7 표현, 70%불투명도, 30%투명 */
+    color: rgba(255,255,255,255,0.7);
+    margin-bottom: 30px;
+}
+.choice-content{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.card{
+    /* flex:1 ; 에 들어가는 설정
+     flex: 1; -> 동등한 비율로 분배할 때 많이 사용함
+    flex-grow : 여유 공간을 얼마나 차지할지
+    flex-shrink : 공간이 줄어들 때 얼마나 줄일지 1로 설정, 같은 비율로 줄어듦
+    flex-basis : 초기 크기(기준크기) 0% (기본 크기 없음, 처음엔 0부터 시작)*/
+    flex: 1;    
+    border: 0;
+    outline: 0;
+    border-radius: 10px;
+    background: linear-gradient(to bottom, rgba(25,32,68,1) 0%, rgba(32,19,34,1) 62%);
+    padding: 40px;
+    height: 300px;
+    position: relative;
+}
+
+.subject-img{
+    width: 80px;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+
+}
+
+.subject-img img{
+    width: 100%;
+    height: 50px;
+    object-fit: cover;
+}
+/* 반응형 선택 가이드 부분 작업 */
+@media only screen and (max-width: 768px){
+    .card {
+        flex-basis: calc(50% - 15px);
+    }
+}
+
+@media only screen and (min-width: 769px) and (max-width: 1220px){
+    .card {
+        flex-basis: calc(50% - 15px);
+    }
+}
+/* FAQ 부분 작업 */
+ #faq .accordion{
+    width: 100%;
+    max-width: 750px;
+    margin: 60px auto;
+    
+ }
+ .accordion li{
+    list-style: none;
+    width: 100%;
+    padding: 5px;
+ }
+
+ .accordion li label{
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 500;
+    background: #303030;
+    margin-bottom: 2px;
+    cursor: pointer;
+    /* 기준위치 */
+    position: relative;
+ }
+ /* 가상요소 : html 수정하지 않고, 시각적인 효과를 주기위해 사용 
+ 사용 방법은 요소 뒤에 (::)을 붙여서 사용
+ ::after : 해당 요소의 마지막 부분에 콘텐츠를 추가할 수 있음
+ 주의사항, 반드시 content 속성이 잇어야 동작함
+ 
+ ::before : 해당 요소의 첫 부분에 콘텐츠 추가*/
+ .accordion li label::after{
+    content: '\2b';
+    font-size: 65px;
+    position: absolute;
+    right: 20px;
+    bottom: 1px;
+    transition: 0.5s;
+ }
+
+  .accordion input[type="radio"]
+  {
+    display: none;
+  }
+
+  .accordion .content{
+    background: #303030;
+    font-size: 22px;
+    line-height: 1.6;
+    text-align: left;
+    padding: 0 20px;
+    max-height: 0;
+    overflow: hidden;
+  }
+
+  /* input[type="radio"]체크 하면 
+  + : 바로 다음 형제 요소에 대해서 선택하는 기능 
+  클래스 하위의 content만 가르키는 거임*/
+  .accordion input[type="radio"]:checked + label + .content{
+    max-height: 600px;
+    padding: 30px 20px;
+    transition: 1s;
+  }
+
+  /* label끝에 있는 요소를 가르킴 +표시 */
+  .accordion input[type="radio"]:checked + label::after{
+    transform: rotate(-135deg);
+    
+  }
+  .newsletter{
+    padding: 20px;
+  }
+  
+/* footer 부분 작업 */
+footer{
+    padding: 60px 10%;
+}
+
+.footer-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    gap: 30px;
+}
+
+.footer-content a{
+    color: rgba(255,255,255,0.7);
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.left{
+    flex-basis: 60%;
+}
+
+.center,.right{
+    flex-basis: 20%;
+    vertical-align: top;
+}
+.col h2{
+    color: rgba(255,255,255,0.7);
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+.col h3{
+    color: rgba(255,255,255,0.7);
+    font-size: 24px;
+    margin-bottom: 20px;
+    
+}
+.footer-nav{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+    margin-bottom: 36px;
+}
+/* .footer-nav요소 하위에 li요소 중
+마지막 요소를 제외한 전체 */
+.footer-nav li:not(:last-child){
+    padding-right: 20px;
+    border-right: 1px solid #eee;
+}
+/* .footer-content div:not(last-child){
+    padding-right: 20px;
+    border-right: 1px solid #eee;
+} */
+
+.footer-info{
+    margin-top: 20px;
+    color: rgba(255,255,255,0.7);
+}
+.socials{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.socials a{
+    color: rgba(255,255,255,0.7);
+    font-size: 16px;
+}
+
+.copyright{
+    margin-top: 20px;
+    color: rgba(255,255,255,0.7);
+    font-size: 16px;
+}
+
+footer-content p{
+    font-size: 14px;
+    line-height: 0.6;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 20px;
+}
+
+/* 반응형 footer 부분 작업 */
+
+@media screen and (max-width: 768px){
+    .footer-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .col{
+        flex-basis: 100%;
+    }
+    .col h2{
+        color: rgba(255,255,255,0.7);
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    .col h3{
+        color: rgba(255,255,255,0.7);
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+}
