@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- css 파일 분리해서 불러오는 코드 -->
-    <link rel="stylesheet" href="Join.css">
+    <link rel="stylesheet" href="Login.css">
 </head>
 
 <body>
@@ -39,39 +39,39 @@
             </aside>
             <!--//////////////////////////////////////////////////////////////////////// -->
             <div id="container_join">
-        <h1>로그인</h1>
-        <!-- 회원가입 입력 폼 시작 -->
-        <!-- form태그는 무언가 입력창들의 모음집, 그룹화, 클라이언트(앞단) -> 서버로 전달시 사용 -->
-        <form id="signupForm">
+                <h1>로그인</h1>
+                <!-- 회원가입 입력 폼 시작 -->
+                <!-- form태그는 무언가 입력창들의 모음집, 그룹화, 클라이언트(앞단) -> 서버로 전달시 사용 -->
+                <form id="signupForm">
 
-            <!-- 추가 작업 프로필 이미지 표시하는 화면 -->
-            <div id="profilePreviewBox">
-                <img id="profilePreview" src="/img/profile.jpg" alt="프로필 미리보기">
+                    <!-- 추가 작업 프로필 이미지 표시하는 화면 -->
+                    <div id="profilePreviewBox">
+                        <img id="profilePreview" src="/img/profile.jpg" alt="프로필 미리보기">
+                    </div>
+
+                    <!-- 유저명, 텍스트 입력창 -->
+                    <label>
+                        유저명 : <input type="text" name="username" placeholder="유저명을 입력해주세요" required>
+                    </label>
+                    <!-- 비밀번호 입력 -->
+                    <label>
+                        패스워드 : <input type="password" name="password" placeholder="패스워드를 입력해주세요">
+                    </label>
+                    <!-- 채크박스 이용해서, 그룹으로 취미 선택 -->
+
+
+
+                    <!-- 이메일 입력 -->
+                    <label>
+                        이메일 : <input type="email" name="email" placeholder="이메일을 입력해주세요">
+                    </label>
+
+                    <!-- 프로필 사진 등록 : 파일첨부-->
+
+                    <!-- 폼을 제출하는 용도의 버튼 -->
+                    <button type="submit"> LogIn </button>
+                </form>
             </div>
-
-            <!-- 유저명, 텍스트 입력창 -->
-            <label>
-                유저명 : <input type="text" name="username" placeholder="유저명을 입력해주세요" required>
-            </label>
-            <!-- 비밀번호 입력 -->
-            <label>
-                패스워드 : <input type="password" name="password" placeholder="패스워드를 입력해주세요" >
-            </label>
-            <!-- 채크박스 이용해서, 그룹으로 취미 선택 -->
-            
-
-    
-            <!-- 이메일 입력 -->
-            <label>
-                이메일 : <input type="email" name="email" >
-            </label>
-
-            <!-- 프로필 사진 등록 : 파일첨부-->
-
-            <!-- 폼을 제출하는 용도의 버튼 -->
-            <button type="submit"> LogIn </button>
-        </form>
-    </div>
             <!--//////////////////////////////////////////////////////////////////////// -->
 
             <!-- <section id="activity">
@@ -98,7 +98,7 @@
     <!-- 스크립트 파일 불러오는 위치, 맨 밑에 js 파일을 두는 이유?
     1. 화면에 렌더링 그림을 먼저 그려줘야함.
     뒤에서 천천히 자바스크립트를 읽기. -->
-        <script src="Join.js"></script>
+    <script src="Login.js"></script>
 </body>
 
 </html>

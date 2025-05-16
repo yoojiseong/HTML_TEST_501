@@ -140,21 +140,11 @@ label{
     /* display: flex; */
     flex-direction: column;
 } 
-fieldset{
-    border: 1px solid #ddd;
-    padding: 10px;
-    border-radius: 5px;
-}
-
-legend{
-    font-weight: bold;
-}
 
 /* 모든 입력 요소들에 대해서 통일된 스타일 적용 */
 input[type="text"],
 input[type="password"],
 input[type="number"],
-input[type="date"],
 input[type="email"],
 input[type="file"]
 {
